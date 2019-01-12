@@ -1,7 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_note_app/screens/note_details.dart';
+import 'package:flutter_note_app/utils/database_helper.dart';
+import 'package:flutter_note_app/models/note.dart';
 
 class NoteList extends StatefulWidget {
+
+  DatabaseHelper databaseHelper = DatabaseHelper();
+  List<Note> noteList;
+  int count = 0;
+
   @override
   State<StatefulWidget> createState() {
     return NoteListState();
